@@ -7,15 +7,13 @@ const PokemonList = ({pokemons}) => {
     <div className='PokemonList'>
         {
             pokemons.map((pokemon, index) => (
-                <PokemonCard key={index} />
+                <PokemonCard pokemon={pokemon} key={index} />
             ))
         }
     </div>
   )
 }
 
-PokemonList.defaultProps = {
-    pokemons: Array(10).fill('')
-}
+
 
 export default PokemonList
