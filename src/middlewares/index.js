@@ -15,6 +15,7 @@ export const featuring = (store) => (next) => (actionInfo) => {
 
 export const prefix = store => next => action => {
     const prefixed = action.action.payload.map( pokemon => ({
+        ...pokemon,
         name: 'Poke: ' + pokemon.name
     }) )
 
