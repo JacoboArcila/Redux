@@ -10,6 +10,9 @@ import { getPokemonsWithDetails, setLoading } from "./actions";
 import { useDispatch, useSelector } from "react-redux";
 
 function App() {
+  //useSelector para decirle cual propiedad del estado global queremos acceder
+  //dispatch es el hook que hace que cambie el estado, las acciones que queremos que haga
+
   const pokemons = useSelector((state) => state.pokemons);
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.loading);
